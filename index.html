@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #preference-ctn {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #preference-ctn div {
+            display: flex;
+            align-self: start;
+            max-height: 10em;
+            background-color: whitesmoke;
+            border-radius: 1em;
+            padding: 0.5em;
+            margin: 0em 0.5em;
+        }
+        #preference-ctn div label {
+            margin-left: 0.5em;
+        }
+        #preference-ctn div input {
+            margin-left: 0.3em;
+            margin-right: 0.8em;
+        }
+        #preference-ctn div input[type=text] {
+            width: 2em;
+        }
+        #setAngle-ctn span {
+            display: inline-block;
+            width: 1.3em;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+  </head>
+<body>
+
+
+<section id="preference-ctn">
+    <div id="setCenterCoords-ctn">
+        <label for="centerX">Center X:</label>
+        <input type="text" id="centerXInput" name="centerX" value="250">
+        <label for="centerY">Center Y:</label>
+        <input type="text" id="centerYInput" name="centerY" value="250">
+    </div>
+    <div id="setAngle-ctn">
+        <label for="AngleX">Angle X: <span id="angleXText">0</span></label>
+        <input type="range" id="AngleXInput" name="CoordsX" min="-90" value="0" max="90">
+        <label for="AngleY">Angle Y: <span id="angleYText">0</span></label>
+        <input type="range" id="AngleYInput" name="CoordsY" min="-90" value="0" max="90">
+        <label for="AngleZ">Angle Z: <span id="angleZText">0</span></label>
+        <input type="range" id="AngleZInput" name="CoordsZ" min="-90" value="0" max="90">
+    </div>
+</section>
+
+<h3>Canvas 500x500</h3>
+<div id="canvas-ctn">
+  <canvas id="canvas" width="500" height="500"></canvas>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
